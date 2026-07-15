@@ -94,18 +94,25 @@ class Backtester:
         """Calculate position size based on risk"""
         risk_per_share = abs(entry_price - stop_loss)
         
-        if risk_per_share == 0:
+        if risk_per_share == 0 or risk_per_share > entry_price * 0.5:
             return 0
         
         max_risk_amount = self.capital * max_risk
         
         position_size = max_risk_amount / risk_per_share
         
-        max_position_value = self.capital * 0.95
-        if position_size * entry_price > max_position_value:
+        # Never use more than 30% of capital per trade
+        max_position_value = self.capital * 0.30
+        position_value = position_size * entry_price
+        
+        if position_value > max_position_value:
             position_size = max_position_value / entry_price
         
-        return position_size
+        # Ensure we have enough capital
+        if position_size * entry_price > self.capital * 0.95:
+            position_size = (self.capital * 0.95) / entry_price
+        
+        return max(0, position_size)
     
     def _open_position(self, signal: pd.Series, size: float, timestamp):
         """Open a new position"""
@@ -179,7 +186,8 @@ class Backtester:
         
         pnl -= commission_cost + position['commission_paid']
         
-        self.capital += pnl + (position['entry_price'] * position['size'])
+        # Return capital used for position
+        self.capital += pnl
         
         trade_record = {
             **position,
