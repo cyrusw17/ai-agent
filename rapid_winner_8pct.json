@@ -1,0 +1,18 @@
+{
+  "period": "Q2 2025",
+  "pair": "AUDUSD",
+  "strategy": "EMA5/13_ADX15_S1.0_T4.0",
+  "return": 18.138601623858722,
+  "dd": 0.23426789510073748,
+  "trades": 27,
+  "wr": 88.88888888888889,
+  "cfg": {
+    "type": "ema",
+    "ema_fast": 5,
+    "ema_slow": 13,
+    "adx": 15,
+    "stop": 1.0,
+    "target": 4.0,
+    "name": "EMA5/13_ADX15_S1.0_T4.0"
+  }
+}
