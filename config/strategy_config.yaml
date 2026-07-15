@@ -1,0 +1,166 @@
+# Quantitative Trading Strategy Configuration
+
+# Global Settings
+global:
+  initial_capital: 100000
+  max_risk_per_trade: 0.02  # 2%
+  max_portfolio_risk: 0.10   # 10%
+  max_drawdown_threshold: 0.20  # 20%
+  default_commission: 0.001  # 0.1%
+
+# Data Settings
+data:
+  default_start_date: "2020-01-01"
+  default_end_date: "2024-01-01"
+  interval: "1d"  # 1d, 1h, 15m, etc.
+  default_symbols:
+    - SPY
+    - QQQ
+    - IWM
+    - DIA
+  
+# Liquidity-Adjusted Momentum Strategy
+momentum:
+  enabled: true
+  momentum_lookback: 252  # 12 months
+  momentum_skip: 21       # 1 month
+  volume_lookback: 20
+  volume_ratio_threshold: 1.5
+  illiquidity_percentile: 80
+  rebalance_frequency: 21  # days
+  top_n_stocks: 20
+  position_sizing_method: "liquidity_weighted"
+
+# Pairs Trading Strategy
+pairs:
+  enabled: true
+  lookback_period: 252
+  entry_z_score: 2.0
+  exit_z_score: 0.5
+  stop_loss_z_score: 3.5
+  min_half_life: 5        # days
+  max_half_life: 60       # days
+  use_kalman_filter: true
+  max_p_value: 0.05
+  max_pairs: 5
+  capital_per_pair: 20000
+  
+# Hybrid Momentum-Reversion Strategy
+hybrid:
+  enabled: true
+  regime_mode: "adaptive"  # adaptive, trend, mean_reversion
+  
+  # Trend following parameters
+  ema_fast: 20
+  ema_slow: 50
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  
+  # Mean reversion parameters
+  rsi_period: 14
+  rsi_oversold: 30
+  rsi_overbought: 70
+  bb_period: 20
+  bb_std: 2.0
+  
+  # Risk management
+  atr_period: 14
+  atr_multiplier: 2.0
+  volatility_threshold: 1.5
+  position_size: 0.95
+
+# Machine Learning Strategy
+ml:
+  enabled: true
+  model_type: "xgboost"  # xgboost, random_forest, lstm
+  
+  # Feature engineering
+  feature_lookbacks: [5, 10, 20]
+  prediction_horizon: 1
+  
+  # Training
+  train_size: 252
+  retrain_frequency: 21
+  min_train_samples: 100
+  
+  # Signal generation
+  prob_threshold: 0.55
+  confidence_scaling: true
+  
+  # XGBoost parameters
+  xgboost:
+    objective: "binary:logistic"
+    max_depth: 5
+    learning_rate: 0.1
+    n_estimators: 100
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    
+  # Random Forest parameters
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+    random_state: 42
+
+# Risk Management
+risk_management:
+  position_sizing:
+    method: "kelly"  # fixed, kelly, volatility_adjusted, optimal_f
+    kelly_fraction: 0.25  # Quarter Kelly
+    max_kelly: 0.25
+    
+  stops:
+    use_atr_stops: true
+    atr_multiplier: 2.0
+    use_trailing_stops: false
+    trailing_pct: 0.05
+    
+  drawdown_control:
+    max_drawdown: 0.20
+    kill_switch_dd: 0.25
+    reduce_size_at_dd: 0.15
+    
+  var_limits:
+    var_confidence: 0.95
+    max_var: 0.05
+    cvar_limit: 0.08
+
+# Backtesting
+backtesting:
+  walk_forward:
+    enabled: true
+    train_ratio: 0.7
+    n_splits: 5
+    
+  costs:
+    commission_pct: 0.001
+    slippage_pct: 0.0005
+    include_costs: true
+    
+  metrics:
+    risk_free_rate: 0.02
+    benchmark: "SPY"
+    
+# Visualization
+visualization:
+  save_charts: true
+  output_dir: "/workspace/results"
+  chart_formats: ["png", "html"]
+  
+  plots:
+    - equity_curve
+    - drawdown
+    - returns_distribution
+    - strategy_comparison
+    - feature_importance
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "/workspace/logs/trading.log"
+  log_trades: true
+  log_signals: true
+  log_performance: true
