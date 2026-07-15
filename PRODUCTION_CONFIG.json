@@ -1,0 +1,43 @@
+{
+  "strategy_name": "Optimized Dynamic Targets Multi-Pair",
+  "version": "2.0",
+  "enhancements": {
+    "dynamic_targets": true,
+    "volatility_regime": true,
+    "multi_pair": true
+  },
+  "parameters": {
+    "sniper_allocation": 0.6,
+    "background_allocation": 0.4,
+    "sniper_risk": 0.05,
+    "background_risk": 0.02,
+    "sniper_ema": [
+      3,
+      9
+    ],
+    "sniper_adx": 10,
+    "background_ema": [
+      9,
+      21
+    ],
+    "background_adx": 20,
+    "max_dd_stop": 25.0,
+    "max_sniper_size": 0.15,
+    "max_background_size": 0.1
+  },
+  "pairs": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD"
+  ],
+  "expected_performance": {
+    "return_6m": "1956.33%",
+    "annualized": "163134.86%",
+    "monthly": "65.52%",
+    "max_dd": "69.33%",
+    "win_rate": "68.8%",
+    "trades": "38",
+    "sharpe": "0.61"
+  }
+}

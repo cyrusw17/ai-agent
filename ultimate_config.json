@@ -1,0 +1,21 @@
+{
+  "config_name": "Dynamic Targets Only",
+  "metrics": {
+    "config": "Dynamic Targets Only",
+    "profit": 1041552.193389714,
+    "dd": 27438.701238596328,
+    "trades": 155.0,
+    "win_rate": 0.6538709677419355,
+    "sharpe": 1.5170435669600089,
+    "profit_per_trade": 6719.691570256219
+  },
+  "settings": {
+    "dynamic_targets": true
+  },
+  "pairs": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD"
+  ]
+}
