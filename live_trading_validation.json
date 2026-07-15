@@ -1,0 +1,13 @@
+{
+  "out_of_sample": {
+    "avg_return": 19.740532567608035,
+    "median_return": 18.795864687434616,
+    "profitable_rate": 0.95,
+    "avg_dd": 3.832282557585427
+  },
+  "parameter_sensitivity": {
+    "configs_tested": 6,
+    "profitable_configs": 6,
+    "robustness_score": 1.0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pairs_tested": [
+    "EURUSD=X",
+    "GBPUSD=X",
+    "USDJPY=X",
+    "AUDUSD=X"
+  ],
+  "avg_return": 377.9696259935161,
+  "median_return": 405.37326537785583,
+  "avg_dd": 27.78362639190548,
+  "avg_trades": 71.0,
+  "profitable_rate": 1.0
+}
