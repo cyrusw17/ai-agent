@@ -1,0 +1,1010 @@
+{
+  "starting_balance": 1000.0,
+  "final_balance": 8938.04,
+  "profit": 7938.04,
+  "return_pct": 793.8,
+  "total_trades": 34,
+  "win_rate": 73.5,
+  "max_drawdown": 39.49,
+  "leverage": 50,
+  "max_dd_limit": 20,
+  "stopped_out": true,
+  "stop_reason": "Max drawdown reached: $394.94 (20% limit = $200.00)",
+  "equity_curve": [
+    {
+      "date": "2026-01-19",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-20",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-21",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-22",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-23",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-26",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-27",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-28",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-29",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-30",
+      "equity": 1184.03,
+      "peak": 1184.03,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-02",
+      "equity": 1184.03,
+      "peak": 1184.03,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-03",
+      "equity": 1254.4,
+      "peak": 1254.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-04",
+      "equity": 1254.4,
+      "peak": 1254.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-05",
+      "equity": 1254.4,
+      "peak": 1254.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-06",
+      "equity": 1254.4,
+      "peak": 1254.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-09",
+      "equity": 1476.82,
+      "peak": 1476.82,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-10",
+      "equity": 1476.82,
+      "peak": 1476.82,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-11",
+      "equity": 1476.82,
+      "peak": 1476.82,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-12",
+      "equity": 1428.29,
+      "peak": 1476.82,
+      "drawdown_pct": 3.29
+    },
+    {
+      "date": "2026-02-13",
+      "equity": 1428.29,
+      "peak": 1476.82,
+      "drawdown_pct": 3.29
+    },
+    {
+      "date": "2026-02-16",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-17",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-18",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-19",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-20",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-23",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-24",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-25",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-26",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-02-27",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-03-02",
+      "equity": 1415.62,
+      "peak": 1476.82,
+      "drawdown_pct": 4.14
+    },
+    {
+      "date": "2026-03-03",
+      "equity": 1622.89,
+      "peak": 1622.89,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-04",
+      "equity": 1622.89,
+      "peak": 1622.89,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-05",
+      "equity": 1622.89,
+      "peak": 1622.89,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "equity": 1622.89,
+      "peak": 1622.89,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-09",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-10",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-11",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-12",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-13",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-16",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "equity": 1984.24,
+      "peak": 1984.24,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-18",
+      "equity": 2078.34,
+      "peak": 2078.34,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "equity": 2159.99,
+      "peak": 2159.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-20",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-25",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-27",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-30",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-01",
+      "equity": 2245.19,
+      "peak": 2245.19,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "equity": 2333.29,
+      "peak": 2333.29,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-03",
+      "equity": 2852.99,
+      "peak": 2852.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-06",
+      "equity": 3021.91,
+      "peak": 3021.91,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-07",
+      "equity": 3724.25,
+      "peak": 3724.25,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-08",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-09",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-10",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-14",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-16",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-17",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-20",
+      "equity": 3899.43,
+      "peak": 3899.43,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-21",
+      "equity": 4051.93,
+      "peak": 4051.93,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-22",
+      "equity": 4051.93,
+      "peak": 4051.93,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-23",
+      "equity": 4051.93,
+      "peak": 4051.93,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-24",
+      "equity": 4051.93,
+      "peak": 4051.93,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-27",
+      "equity": 4051.93,
+      "peak": 4051.93,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-28",
+      "equity": 4290.87,
+      "peak": 4290.87,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-29",
+      "equity": 4595.2,
+      "peak": 4595.2,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-30",
+      "equity": 4595.2,
+      "peak": 4595.2,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-01",
+      "equity": 4774.75,
+      "peak": 4774.75,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-04",
+      "equity": 4774.75,
+      "peak": 4774.75,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-05",
+      "equity": 4791.72,
+      "peak": 4791.72,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-06",
+      "equity": 5493.99,
+      "peak": 5493.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-07",
+      "equity": 5493.99,
+      "peak": 5493.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-08",
+      "equity": 5493.99,
+      "peak": 5493.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-11",
+      "equity": 5493.99,
+      "peak": 5493.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-12",
+      "equity": 5493.99,
+      "peak": 5493.99,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-13",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-14",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-15",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-18",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-19",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-20",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-21",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-22",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-25",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-26",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-27",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-28",
+      "equity": 5752.4,
+      "peak": 5752.4,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-05-29",
+      "equity": 5921.9,
+      "peak": 5921.9,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-01",
+      "equity": 5921.9,
+      "peak": 5921.9,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-02",
+      "equity": 6789.03,
+      "peak": 6789.03,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-03",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-04",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-05",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-08",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-09",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-10",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-11",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-12",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-15",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-16",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-17",
+      "equity": 7781.12,
+      "peak": 7781.12,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-06-18",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-19",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-22",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-23",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-24",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-25",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-26",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-29",
+      "equity": 7711.77,
+      "peak": 7781.12,
+      "drawdown_pct": 0.89
+    },
+    {
+      "date": "2026-06-30",
+      "equity": 7643.12,
+      "peak": 7781.12,
+      "drawdown_pct": 1.77
+    },
+    {
+      "date": "2026-07-01",
+      "equity": 7643.12,
+      "peak": 7781.12,
+      "drawdown_pct": 1.77
+    },
+    {
+      "date": "2026-07-02",
+      "equity": 9249.13,
+      "peak": 9249.13,
+      "drawdown_pct": 0.0
+    }
+  ],
+  "recent_trades": [
+    {
+      "date": "2026-01-29",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 222.85,
+      "equity_after": 1222.85
+    },
+    {
+      "date": "2026-01-29",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -38.82,
+      "equity_after": 1184.03
+    },
+    {
+      "date": "2026-02-02",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 70.37,
+      "equity_after": 1254.4
+    },
+    {
+      "date": "2026-02-06",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 222.42,
+      "equity_after": 1476.82
+    },
+    {
+      "date": "2026-02-11",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -48.53,
+      "equity_after": 1428.29
+    },
+    {
+      "date": "2026-02-13",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": false,
+      "pnl": -12.67,
+      "equity_after": 1415.62
+    },
+    {
+      "date": "2026-03-02",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 207.27,
+      "equity_after": 1622.89
+    },
+    {
+      "date": "2026-03-06",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 361.35,
+      "equity_after": 1984.24
+    },
+    {
+      "date": "2026-03-17",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 94.1,
+      "equity_after": 2078.34
+    },
+    {
+      "date": "2026-03-18",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 81.65,
+      "equity_after": 2159.99
+    },
+    {
+      "date": "2026-03-19",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 85.2,
+      "equity_after": 2245.19
+    },
+    {
+      "date": "2026-04-01",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 88.1,
+      "equity_after": 2333.29
+    },
+    {
+      "date": "2026-04-02",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 519.7,
+      "equity_after": 2852.99
+    },
+    {
+      "date": "2026-04-03",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 168.92,
+      "equity_after": 3021.91
+    },
+    {
+      "date": "2026-04-06",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 534.95,
+      "equity_after": 3556.86
+    },
+    {
+      "date": "2026-04-06",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 167.38,
+      "equity_after": 3724.25
+    },
+    {
+      "date": "2026-04-07",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 175.18,
+      "equity_after": 3899.43
+    },
+    {
+      "date": "2026-04-20",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 152.5,
+      "equity_after": 4051.93
+    },
+    {
+      "date": "2026-04-27",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 238.94,
+      "equity_after": 4290.87
+    },
+    {
+      "date": "2026-04-28",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 304.33,
+      "equity_after": 4595.2
+    },
+    {
+      "date": "2026-04-30",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 179.54,
+      "equity_after": 4774.75
+    },
+    {
+      "date": "2026-05-04",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -162.7,
+      "equity_after": 4612.05
+    },
+    {
+      "date": "2026-05-04",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 179.67,
+      "equity_after": 4791.72
+    },
+    {
+      "date": "2026-05-05",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 702.27,
+      "equity_after": 5493.99
+    },
+    {
+      "date": "2026-05-12",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 258.41,
+      "equity_after": 5752.4
+    },
+    {
+      "date": "2026-05-28",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": false,
+      "pnl": -52.32,
+      "equity_after": 5700.08
+    },
+    {
+      "date": "2026-05-28",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 221.82,
+      "equity_after": 5921.9
+    },
+    {
+      "date": "2026-06-01",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 867.13,
+      "equity_after": 6789.03
+    },
+    {
+      "date": "2026-06-02",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 992.09,
+      "equity_after": 7781.12
+    },
+    {
+      "date": "2026-06-17",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": false,
+      "pnl": -69.35,
+      "equity_after": 7711.77
+    },
+    {
+      "date": "2026-06-29",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": false,
+      "pnl": -68.64,
+      "equity_after": 7643.12
+    },
+    {
+      "date": "2026-07-01",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 1689.86,
+      "equity_after": 9332.98
+    },
+    {
+      "date": "2026-07-01",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": false,
+      "pnl": -83.85,
+      "equity_after": 9249.13
+    },
+    {
+      "date": "2026-07-02",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -311.09,
+      "equity_after": 8938.04
+    }
+  ],
+  "aggregate_stats": {
+    "simulations": 20,
+    "avg_final": 8751.55,
+    "avg_return": 775.16,
+    "stopped_out_rate": 100.0,
+    "profitable_rate": 100.0
+  }
+}
