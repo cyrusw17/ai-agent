@@ -1,0 +1,34 @@
+{
+  "config": {
+    "sniper_ema_fast": 3,
+    "sniper_ema_slow": 9,
+    "sniper_adx_min": 10,
+    "sniper_stop_mult": 0.75,
+    "sniper_target_mult": 7.5,
+    "sniper_risk": 2.0,
+    "background_ema_fast": 9,
+    "background_ema_slow": 21,
+    "background_adx_min": 20,
+    "background_stop_mult": 2.0,
+    "background_target_mult": 4.0,
+    "background_risk": 1.0,
+    "capital_split": 0.6,
+    "volatility_adjustment": true,
+    "max_dd_pct": 20
+  },
+  "performance": {
+    "median_return": 1059.5086750007117,
+    "avg_trades": 57.7,
+    "avg_win_rate": 58.39158613064943,
+    "avg_max_dd": 20.932670668445798,
+    "sharpe_approx": 3.936122838418637,
+    "composite_score": 464.8802052315981
+  },
+  "tested_on": "2026-04-17 to 2026-07-16",
+  "tested_pairs": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD"
+  ]
+}

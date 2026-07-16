@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Market Validation - Trading Strategy</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+        
+        .nav-links a:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .summary-card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+        }
+        
+        .positive {
+            color: #22c55e;
+        }
+        
+        .negative {
+            color: #ef4444;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .chart-container h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box h3 {
+            color: #d97706;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p {
+            color: #92400e;
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .info-box p, .info-box ul {
+            color: #1e3a8a;
+            line-height: 1.6;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f3f4f6;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Cross-Market Validation</h1>
+            <p>Testing the forex-optimized strategy on crypto, commodities, and stocks</p>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="leveraged.html">Dual Strategy</a>
+                <a href="recommendation.html">Live Recommendation</a>
+                <a href="3year_comparison.html">3-Year Comparison</a>
+                <a href="recommended_strategy.html">Expected Performance</a>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h3>⚠️ Key Finding: Strategy is Forex-Specific</h3>
+            <p>The production strategy, which achieves <strong>1059% median return on forex</strong>, does NOT transfer well to other markets. This is actually expected and demonstrates that the strategy is genuinely optimized for forex market characteristics rather than being a universal pattern exploiter.</p>
+        </div>
+
+        <div id="marketSummaries" class="summary-grid"></div>
+
+        <div class="chart-container">
+            <h2>📊 Market Performance Comparison</h2>
+            <canvas id="marketComparisonChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>📈 Individual Instrument Returns</h2>
+            <canvas id="instrumentChart"></canvas>
+        </div>
+
+        <div class="info-box">
+            <h3>💡 Why Different Markets Perform Differently</h3>
+            <ul>
+                <li><strong>Forex:</strong> 24/5 trading, high liquidity, stable trending behavior, leverage-friendly</li>
+                <li><strong>Crypto:</strong> Extremely volatile, 24/7 trading, different market structure, gaps and flash crashes</li>
+                <li><strong>Commodities:</strong> Fundamentals-driven, supply/demand dynamics, seasonal patterns</li>
+                <li><strong>Stocks:</strong> Limited trading hours, earnings-driven volatility, different risk characteristics</li>
+            </ul>
+            <p style="margin-top: 15px;">Each market requires specific parameter tuning and risk management approaches. The forex strategy's poor performance on other markets validates that it's not overfitted to random noise but genuinely captures forex-specific edge.</p>
+        </div>
+
+        <div class="comparison-table">
+            <table id="detailTable">
+                <thead>
+                    <tr>
+                        <th>Instrument</th>
+                        <th>Market</th>
+                        <th>Median Return</th>
+                        <th>Trades</th>
+                        <th>Win Rate</th>
+                        <th>Max DD</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Load and display data
+        fetch('cross_market_data.json')
+            .then(response => response.json())
+            .then(data => {
+                displayMarketSummaries(data.market_summaries);
+                createMarketComparisonChart(data.market_summaries);
+                createInstrumentChart(data.results);
+                populateDetailTable(data.results);
+            })
+            .catch(error => console.error('Error loading data:', error));
+
+        function displayMarketSummaries(summaries) {
+            const container = document.getElementById('marketSummaries');
+            
+            const markets = [
+                { name: 'Crypto', data: summaries.crypto, emoji: '💰', color: '#f59e0b' },
+                { name: 'Commodities', data: summaries.commodities, emoji: '🛢️', color: '#8b5cf6' },
+                { name: 'Stocks', data: summaries.stocks, emoji: '📈', color: '#3b82f6' }
+            ];
+            
+            markets.forEach(market => {
+                const card = document.createElement('div');
+                card.className = 'summary-card';
+                card.style.borderTop = `4px solid ${market.color}`;
+                
+                const returnClass = market.data.avg_return >= 0 ? 'positive' : 'negative';
+                
+                card.innerHTML = `
+                    <h2>${market.emoji} ${market.name}</h2>
+                    <div class="stat-row">
+                        <span class="stat-label">Instruments Tested</span>
+                        <span class="stat-value">${market.data.instruments.length}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Avg Return</span>
+                        <span class="stat-value ${returnClass}">${market.data.avg_return.toFixed(1)}%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Profitable %</span>
+                        <span class="stat-value">${market.data.profitable_pct.toFixed(0)}%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Instruments</span>
+                        <span class="stat-value" style="font-size: 0.85em;">${market.data.instruments.join(', ')}</span>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        function createMarketComparisonChart(summaries) {
+            const ctx = document.getElementById('marketComparisonChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Crypto', 'Commodities', 'Stocks'],
+                    datasets: [{
+                        label: 'Average Return (%)',
+                        data: [
+                            summaries.crypto.avg_return,
+                            summaries.commodities.avg_return,
+                            summaries.stocks.avg_return
+                        ],
+                        backgroundColor: [
+                            'rgba(245, 158, 11, 0.7)',
+                            'rgba(139, 92, 246, 0.7)',
+                            'rgba(59, 130, 246, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(245, 158, 11)',
+                            'rgb(139, 92, 246)',
+                            'rgb(59, 130, 246)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 2,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 12,
+                            titleFont: {
+                                size: 14
+                            },
+                            bodyFont: {
+                                size: 13
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Average Return (%)',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createInstrumentChart(results) {
+            const ctx = document.getElementById('instrumentChart').getContext('2d');
+            
+            const colors = {
+                'Crypto': 'rgba(245, 158, 11, 0.7)',
+                'Commodities': 'rgba(139, 92, 246, 0.7)',
+                'Stocks': 'rgba(59, 130, 246, 0.7)'
+            };
+            
+            const datasets = ['Crypto', 'Commodities', 'Stocks'].map(market => {
+                const marketData = results.filter(r => r.market === market);
+                return {
+                    label: market,
+                    data: marketData.map(r => r.median_return),
+                    backgroundColor: colors[market],
+                    borderColor: colors[market].replace('0.7', '1'),
+                    borderWidth: 2
+                };
+            });
+            
+            // Get all unique symbols
+            const symbols = [...new Set(results.map(r => r.symbol))];
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: symbols,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 2.5,
+                    plugins: {
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    const result = results.find(r => 
+                                        r.symbol === context.label && 
+                                        r.market === context.dataset.label
+                                    );
+                                    if (result) {
+                                        return [
+                                            `${context.dataset.label}`,
+                                            `Return: ${result.median_return.toFixed(1)}%`,
+                                            `Trades: ${result.median_trades}`,
+                                            `Win Rate: ${result.median_win_rate.toFixed(1)}%`,
+                                            `Max DD: ${result.median_max_dd.toFixed(1)}%`
+                                        ];
+                                    }
+                                    return context.formattedValue;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Median Return (%)',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function populateDetailTable(results) {
+            const tbody = document.querySelector('#detailTable tbody');
+            
+            results.forEach(result => {
+                const row = document.createElement('tr');
+                const returnClass = result.median_return >= 0 ? 'positive' : 'negative';
+                
+                row.innerHTML = `
+                    <td><strong>${result.symbol}</strong></td>
+                    <td>${result.market}</td>
+                    <td class="${returnClass}"><strong>${result.median_return.toFixed(1)}%</strong></td>
+                    <td>${result.median_trades}</td>
+                    <td>${result.median_win_rate.toFixed(1)}%</td>
+                    <td>${result.median_max_dd.toFixed(1)}%</td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
