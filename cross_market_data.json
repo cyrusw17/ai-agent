@@ -1,0 +1,266 @@
+{
+  "config": {
+    "sniper_ema_fast": 3,
+    "sniper_ema_slow": 9,
+    "sniper_adx_min": 10,
+    "sniper_stop_mult": 0.75,
+    "sniper_target_mult": 7.5,
+    "sniper_risk": 2.0,
+    "background_ema_fast": 9,
+    "background_ema_slow": 21,
+    "background_adx_min": 20,
+    "background_stop_mult": 2.0,
+    "background_target_mult": 4.0,
+    "background_risk": 1.0,
+    "capital_split": 0.6,
+    "volatility_adjustment": true,
+    "max_dd_pct": 20
+  },
+  "test_period": {
+    "days": 90,
+    "end_date": "2026-07-16"
+  },
+  "results": [
+    {
+      "symbol": "BTC-USD",
+      "market": "Crypto",
+      "median_return": -60.00011672233014,
+      "avg_return": -60.00011672233014,
+      "std_return": 0.0,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.00011672233014,
+      "min_return": -60.00011672233014,
+      "max_return": -60.00011672233014
+    },
+    {
+      "symbol": "ETH-USD",
+      "market": "Crypto",
+      "median_return": -60.0032212925279,
+      "avg_return": -60.0032212925279,
+      "std_return": 0.0,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.0032212925279,
+      "min_return": -60.0032212925279,
+      "max_return": -60.0032212925279
+    },
+    {
+      "symbol": "BNB-USD",
+      "market": "Crypto",
+      "median_return": -60.01774023002581,
+      "avg_return": -60.0177402300258,
+      "std_return": 7.105427357601002e-15,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.01774023002581,
+      "min_return": -60.01774023002581,
+      "max_return": -60.01774023002581
+    },
+    {
+      "symbol": "SOL-USD",
+      "market": "Crypto",
+      "median_return": -47.64344818987195,
+      "avg_return": -47.64344818987195,
+      "std_return": 0.0,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 47.64344818987195,
+      "min_return": -47.64344818987195,
+      "max_return": -47.64344818987195
+    },
+    {
+      "symbol": "ADA-USD",
+      "market": "Crypto",
+      "median_return": 2.572938013045291,
+      "avg_return": 2.572938013045291,
+      "std_return": 0.0,
+      "median_trades": 64.0,
+      "median_win_rate": 28.125,
+      "median_max_dd": 3.6156619287113925,
+      "min_return": 2.572938013045291,
+      "max_return": 2.572938013045291
+    },
+    {
+      "symbol": "GC=F",
+      "market": "Commodities",
+      "median_return": -60.001989983579385,
+      "avg_return": -60.00198998357938,
+      "std_return": 7.105427357601002e-15,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.001989983579385,
+      "min_return": -60.001989983579385,
+      "max_return": -60.001989983579385
+    },
+    {
+      "symbol": "SI=F",
+      "market": "Commodities",
+      "median_return": -51.46846249302446,
+      "avg_return": -51.46846249302446,
+      "std_return": 0.0,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 51.46846249302446,
+      "min_return": -51.46846249302446,
+      "max_return": -51.46846249302446
+    },
+    {
+      "symbol": "CL=F",
+      "market": "Commodities",
+      "median_return": -60.035886977404274,
+      "avg_return": -60.035886977404274,
+      "std_return": 0.0,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.035886977404274,
+      "min_return": -60.035886977404274,
+      "max_return": -60.035886977404274
+    },
+    {
+      "symbol": "NG=F",
+      "market": "Commodities",
+      "median_return": -20.37403683056224,
+      "avg_return": -20.37403683056224,
+      "std_return": 0.0,
+      "median_trades": 12.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 20.37403683056224,
+      "min_return": -20.37403683056224,
+      "max_return": -20.37403683056224
+    },
+    {
+      "symbol": "SPY",
+      "market": "Stocks",
+      "median_return": -0.001625763176389228,
+      "avg_return": -0.001625763176389228,
+      "std_return": 0.0,
+      "median_trades": 2.0,
+      "median_win_rate": 50.0,
+      "median_max_dd": 28.57223158669784,
+      "min_return": -0.001625763176389228,
+      "max_return": -0.001625763176389228
+    },
+    {
+      "symbol": "QQQ",
+      "market": "Stocks",
+      "median_return": -0.0010838678221944066,
+      "avg_return": -0.0010838678221944066,
+      "std_return": 0.0,
+      "median_trades": 2.0,
+      "median_win_rate": 50.0,
+      "median_max_dd": 28.571933455871484,
+      "min_return": -0.0010838678221944066,
+      "max_return": -0.0010838678221944066
+    },
+    {
+      "symbol": "AAPL",
+      "market": "Stocks",
+      "median_return": -0.0019405615347068304,
+      "avg_return": -0.0019405615347068306,
+      "std_return": 2.168404344971009e-19,
+      "median_trades": 2.0,
+      "median_win_rate": 50.0,
+      "median_max_dd": 28.572496317371527,
+      "min_return": -0.0019405615347068304,
+      "max_return": -0.0019405615347068304
+    },
+    {
+      "symbol": "MSFT",
+      "market": "Stocks",
+      "median_return": -60.00284836076389,
+      "avg_return": -60.00284836076389,
+      "std_return": 0.0,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.00284836076389,
+      "min_return": -60.00284836076389,
+      "max_return": -60.00284836076389
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "Stocks",
+      "median_return": -60.00297243343237,
+      "avg_return": -60.00297243343236,
+      "std_return": 7.105427357601002e-15,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.00297243343237,
+      "min_return": -60.00297243343237,
+      "max_return": -60.00297243343237
+    },
+    {
+      "symbol": "AMZN",
+      "market": "Stocks",
+      "median_return": -60.004541825451106,
+      "avg_return": -60.00454182545111,
+      "std_return": 7.105427357601002e-15,
+      "median_trades": 1.0,
+      "median_win_rate": 0.0,
+      "median_max_dd": 60.004541825451106,
+      "min_return": -60.004541825451106,
+      "max_return": -60.004541825451106
+    },
+    {
+      "symbol": "TSLA",
+      "market": "Stocks",
+      "median_return": -0.0007023505008191933,
+      "avg_return": -0.0007023505008191933,
+      "std_return": 0.0,
+      "median_trades": 2.0,
+      "median_win_rate": 50.0,
+      "median_max_dd": 28.571746652321778,
+      "min_return": -0.0007023505008191933,
+      "max_return": -0.0007023505008191933
+    },
+    {
+      "symbol": "NVDA",
+      "market": "Stocks",
+      "median_return": -0.0013964936580805442,
+      "avg_return": -0.001396493658080544,
+      "std_return": 2.168404344971009e-19,
+      "median_trades": 2.0,
+      "median_win_rate": 50.0,
+      "median_max_dd": 28.57211656082613,
+      "min_return": -0.0013964936580805442,
+      "max_return": -0.0013964936580805442
+    }
+  ],
+  "market_summaries": {
+    "crypto": {
+      "instruments": [
+        "BTC-USD",
+        "ETH-USD",
+        "BNB-USD",
+        "SOL-USD",
+        "ADA-USD"
+      ],
+      "avg_return": -45.018317684342094,
+      "profitable_pct": 20.0
+    },
+    "commodities": {
+      "instruments": [
+        "GC=F",
+        "SI=F",
+        "CL=F",
+        "NG=F"
+      ],
+      "avg_return": -47.97009407114259,
+      "profitable_pct": 0.0
+    },
+    "stocks": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "TSLA",
+        "NVDA"
+      ],
+      "avg_return": -22.502138957042444,
+      "profitable_pct": 0.0
+    }
+  }
+}

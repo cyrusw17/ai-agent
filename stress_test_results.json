@@ -1,0 +1,113 @@
+{
+  "stress_testing": [
+    {
+      "scenario": "Optimal",
+      "modifier": 1.0,
+      "avg_profit": 47.69802812473007,
+      "profitable_pct": 100.0
+    },
+    {
+      "scenario": "Good",
+      "modifier": 0.95,
+      "avg_profit": 41.46933940052437,
+      "profitable_pct": 98.0
+    },
+    {
+      "scenario": "Normal",
+      "modifier": 0.9,
+      "avg_profit": 36.74203420991729,
+      "profitable_pct": 96.0
+    },
+    {
+      "scenario": "Poor",
+      "modifier": 0.85,
+      "avg_profit": 33.76002928177688,
+      "profitable_pct": 96.0
+    },
+    {
+      "scenario": "Bad",
+      "modifier": 0.8,
+      "avg_profit": 27.908848247048567,
+      "profitable_pct": 98.0
+    }
+  ],
+  "config_testing": [
+    {
+      "name": "Original (40/60 split)",
+      "avg_profit": 51.78135559535139,
+      "avg_dd": 6.567201233093757,
+      "stopped_out_pct": 0.0
+    },
+    {
+      "name": "Balanced (50/50 split)",
+      "avg_profit": 64.59173311910976,
+      "avg_dd": 7.65040689773295,
+      "stopped_out_pct": 0.0
+    },
+    {
+      "name": "Sniper Focus (60/40 split)",
+      "avg_profit": 69.00314648095785,
+      "avg_dd": 9.626849009173077,
+      "stopped_out_pct": 0.0
+    },
+    {
+      "name": "Conservative Risk",
+      "avg_profit": 24.210651791956593,
+      "avg_dd": 3.5497107515213076,
+      "stopped_out_pct": 0.0
+    },
+    {
+      "name": "Aggressive Risk",
+      "avg_profit": 63.10562710790631,
+      "avg_dd": 10.724439128862366,
+      "stopped_out_pct": 0.0
+    },
+    {
+      "name": "With 15% DD Kill Switch",
+      "avg_profit": 47.19597891068046,
+      "avg_dd": 6.697719436055666,
+      "stopped_out_pct": 0.0
+    }
+  ],
+  "param_testing": [
+    {
+      "name": "Original",
+      "avg_profit": 42.149151172290765,
+      "signal_count": 33
+    },
+    {
+      "name": "Fast Sniper",
+      "avg_profit": 48.98492397195954,
+      "signal_count": 55
+    },
+    {
+      "name": "Slow Sniper",
+      "avg_profit": 47.8806061436434,
+      "signal_count": 27
+    },
+    {
+      "name": "Strict ADX",
+      "avg_profit": 46.662015965188246,
+      "signal_count": 25
+    },
+    {
+      "name": "Relaxed ADX",
+      "avg_profit": 43.40194712406456,
+      "signal_count": 36
+    }
+  ],
+  "recommendations": {
+    "best_config": {
+      "name": "Sniper Focus (60/40 split)",
+      "avg_profit": 69.00314648095785,
+      "avg_dd": 9.626849009173077,
+      "stopped_out_pct": 0.0
+    },
+    "best_params": {
+      "name": "Fast Sniper",
+      "avg_profit": 48.98492397195954,
+      "signal_count": 55
+    },
+    "stress_tolerance": 0.8
+  }
+}

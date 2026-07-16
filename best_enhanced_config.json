@@ -1,0 +1,14 @@
+{
+  "config_name": "Dynamic Targets Only",
+  "metrics": {
+    "config": "Dynamic Targets Only",
+    "profit": 265.20944822399343,
+    "dd": 19.990788181298512,
+    "trades": 36.0,
+    "win_rate": 0.45555555555555555,
+    "sharpe": 3.4100679062352977
+  },
+  "enhancements": {
+    "dynamic_targets": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "firm": "instant",
+  "pair": "EURUSD",
+  "pass_rate": 85.0,
+  "avg_profit": 40.00000000000151,
+  "avg_dd": 0.0,
+  "avg_trades": 1.0,
+  "passed": 17,
+  "failed": 3,
+  "config": {
+    "ema_fast": 5,
+    "ema_slow": 13,
+    "adx": 10,
+    "stop": 1.0,
+    "target": 5.0,
+    "risk": 0.08
+  }
+}

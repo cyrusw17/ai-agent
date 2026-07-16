@@ -1,0 +1,27 @@
+{
+  "generated_date": "2026-07-16 01:28:31",
+  "simulation_start": "2026-07-30",
+  "simulation_end": "2026-10-28",
+  "configuration": {
+    "name": "2% Very Conservative (Recommended)",
+    "sniper_risk": 2.0,
+    "background_risk": 1.0,
+    "sniper_allocation": 60,
+    "background_allocation": 40,
+    "leverage": 50,
+    "max_dd_limit": 20
+  },
+  "starting_capital": 1000.0,
+  "final_capital": 1000,
+  "profit": 0,
+  "return_pct": 0.0,
+  "total_trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate": 0,
+  "max_drawdown": 0,
+  "stopped_out": false,
+  "stopped_date": null,
+  "equity_curve": [],
+  "all_trades": []
+}

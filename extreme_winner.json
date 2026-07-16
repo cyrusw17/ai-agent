@@ -1,0 +1,18 @@
+{
+  "period": "Q1 2026",
+  "pair": "AUDUSD",
+  "strategy": "EMA3/13_ADX12_S1.2_T5.0",
+  "return": 33.224150526548854,
+  "max_dd": 0.9913982704906682,
+  "trades": 33,
+  "win_rate": 72.72727272727273,
+  "config": {
+    "type": "ema",
+    "name": "EMA3/13_ADX12_S1.2_T5.0",
+    "ema_fast": 3,
+    "ema_slow": 13,
+    "min_adx": 12,
+    "stop": 1.2,
+    "target": 5.0
+  }
+}

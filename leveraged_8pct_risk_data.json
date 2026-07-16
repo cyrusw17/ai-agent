@@ -1,0 +1,497 @@
+{
+  "starting_balance": 1000.0,
+  "final_balance": 7940.22,
+  "profit": 6940.22,
+  "return_pct": 694.02,
+  "total_trades": 15,
+  "win_rate": 66.7,
+  "max_drawdown": 44.23,
+  "leverage": 50,
+  "max_risk_per_trade": 8.0,
+  "max_dd_limit": 20,
+  "stopped_out": true,
+  "stop_reason": "Max drawdown reached: $442.28 (20% limit = $200.00)",
+  "equity_curve": [
+    {
+      "date": "2026-01-19",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-20",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-21",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-22",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-23",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-26",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-27",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-28",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-29",
+      "equity": 1000.0,
+      "peak": 1000.0,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-01-30",
+      "equity": 1287.66,
+      "peak": 1287.66,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-02",
+      "equity": 1287.66,
+      "peak": 1287.66,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-03",
+      "equity": 1593.79,
+      "peak": 1593.79,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-04",
+      "equity": 1593.79,
+      "peak": 1593.79,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-05",
+      "equity": 1593.79,
+      "peak": 1593.79,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-06",
+      "equity": 1593.79,
+      "peak": 1593.79,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-09",
+      "equity": 1510.43,
+      "peak": 1593.79,
+      "drawdown_pct": 5.23
+    },
+    {
+      "date": "2026-02-10",
+      "equity": 1510.43,
+      "peak": 1593.79,
+      "drawdown_pct": 5.23
+    },
+    {
+      "date": "2026-02-11",
+      "equity": 1510.43,
+      "peak": 1593.79,
+      "drawdown_pct": 5.23
+    },
+    {
+      "date": "2026-02-12",
+      "equity": 2047.27,
+      "peak": 2047.27,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-13",
+      "equity": 2047.27,
+      "peak": 2047.27,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-16",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-17",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-18",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-19",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-20",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-23",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-24",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-25",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-26",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-02-27",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-02",
+      "equity": 2531.46,
+      "peak": 2531.46,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-03",
+      "equity": 2395.43,
+      "peak": 2531.46,
+      "drawdown_pct": 5.37
+    },
+    {
+      "date": "2026-03-04",
+      "equity": 2395.43,
+      "peak": 2531.46,
+      "drawdown_pct": 5.37
+    },
+    {
+      "date": "2026-03-05",
+      "equity": 2395.43,
+      "peak": 2531.46,
+      "drawdown_pct": 5.37
+    },
+    {
+      "date": "2026-03-06",
+      "equity": 2395.43,
+      "peak": 2531.46,
+      "drawdown_pct": 5.37
+    },
+    {
+      "date": "2026-03-09",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-10",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-11",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-12",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-13",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-16",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "equity": 3248.81,
+      "peak": 3248.81,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-18",
+      "equity": 3865.1,
+      "peak": 3865.1,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "equity": 4472.47,
+      "peak": 4472.47,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-20",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-25",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-27",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-30",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-01",
+      "equity": 5178.16,
+      "peak": 5178.16,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "equity": 4996.68,
+      "peak": 5178.16,
+      "drawdown_pct": 3.5
+    },
+    {
+      "date": "2026-04-03",
+      "equity": 6777.36,
+      "peak": 6777.36,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-04-06",
+      "equity": 8382.5,
+      "peak": 8382.5,
+      "drawdown_pct": 0.0
+    }
+  ],
+  "recent_trades": [
+    {
+      "date": "2026-01-29",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 356.56,
+      "equity_after": 1356.56,
+      "risk_pct": 5.9
+    },
+    {
+      "date": "2026-01-29",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -68.9,
+      "equity_after": 1287.66,
+      "risk_pct": 8.47
+    },
+    {
+      "date": "2026-02-02",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 306.13,
+      "equity_after": 1593.79,
+      "risk_pct": 6.46
+    },
+    {
+      "date": "2026-02-06",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -83.36,
+      "equity_after": 1510.43,
+      "risk_pct": 8.72
+    },
+    {
+      "date": "2026-02-11",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 536.84,
+      "equity_after": 2047.27,
+      "risk_pct": 5.9
+    },
+    {
+      "date": "2026-02-13",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 484.19,
+      "equity_after": 2531.46,
+      "risk_pct": 6.47
+    },
+    {
+      "date": "2026-03-02",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -136.03,
+      "equity_after": 2395.43,
+      "risk_pct": 8.96
+    },
+    {
+      "date": "2026-03-06",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 853.38,
+      "equity_after": 3248.81,
+      "risk_pct": 5.9
+    },
+    {
+      "date": "2026-03-17",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 616.3,
+      "equity_after": 3865.1,
+      "risk_pct": 6.72
+    },
+    {
+      "date": "2026-03-18",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 607.36,
+      "equity_after": 4472.47,
+      "risk_pct": 6.91
+    },
+    {
+      "date": "2026-03-19",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 705.7,
+      "equity_after": 5178.16,
+      "risk_pct": 6.91
+    },
+    {
+      "date": "2026-04-01",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": false,
+      "pnl": -181.48,
+      "equity_after": 4996.68,
+      "risk_pct": 8.76
+    },
+    {
+      "date": "2026-04-02",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": true,
+      "pnl": 1780.68,
+      "equity_after": 6777.36,
+      "risk_pct": 5.9
+    },
+    {
+      "date": "2026-04-03",
+      "pair": "EURUSD",
+      "strategy": "background",
+      "won": true,
+      "pnl": 1605.14,
+      "equity_after": 8382.5,
+      "risk_pct": 6.47
+    },
+    {
+      "date": "2026-04-06",
+      "pair": "EURUSD",
+      "strategy": "sniper",
+      "won": false,
+      "pnl": -442.28,
+      "equity_after": 7940.22,
+      "risk_pct": 8.79
+    }
+  ],
+  "aggregate_stats": {
+    "simulations": 20,
+    "avg_final": 4784.96,
+    "avg_return": 378.5,
+    "stopped_out_rate": 100.0,
+    "profitable_rate": 100.0,
+    "avg_risk_per_trade": 7.01
+  }
+}
