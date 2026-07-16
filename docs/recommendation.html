@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Trading Recommendation - July 16, 2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .highlight-box h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .highlight-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .highlight-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .market-conditions {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .market-conditions h3 {
+            color: #1565c0;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .market-pair {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+
+        .market-pair h4 {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+
+        .market-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .chart-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .chart-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        canvas {
+            max-height: 500px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .comparison-table tr.recommended {
+            background: #e8f5e9;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-recommended {
+            background: #4caf50;
+            color: white;
+        }
+
+        .badge-top3 {
+            background: #2196f3;
+            color: white;
+        }
+
+        .recommendation-box {
+            background: #e8f5e9;
+            border: 3px solid #4caf50;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .recommendation-box h3 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .recommendation-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .recommendation-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .recommendation-section h4 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+
+        .recommendation-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recommendation-section li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .recommendation-section li:last-child {
+            border-bottom: none;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .warning-box ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .highlight-grid,
+            .market-grid,
+            .recommendation-content {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Live Trading Recommendation</h1>
+        <div class="subtitle">Comprehensive Risk Testing & Market Analysis - July 16, 2026</div>
+
+        <div class="highlight-box">
+            <h2>🏆 Recommended Configuration: 2% Very Conservative</h2>
+            <div class="highlight-grid" id="recommendation-stats">
+                <!-- Stats will be populated here -->
+            </div>
+        </div>
+
+        <div class="market-conditions">
+            <h3>🌍 Current Market Conditions (July 16, 2026)</h3>
+            <div style="margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px;">
+                <strong style="color: #1565c0; font-size: 1.1rem;">Market State: NORMAL_VOLATILITY_STRONG_TRENDS</strong>
+                <p style="margin-top: 10px; color: #555;" id="market-recommendation"></p>
+            </div>
+            <div class="market-grid" id="market-analysis">
+                <!-- Market analysis will be populated here -->
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">📊 Risk Configuration Comparison - Median Returns</div>
+            <canvas id="returnComparisonChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-title">⚖️ Risk vs. Return Analysis</div>
+            <canvas id="riskReturnChart"></canvas>
+        </div>
+
+        <div style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+            <h3 style="margin-bottom: 20px;">📋 All Risk Configurations Comparison</h3>
+            <table class="comparison-table" id="comparison-table">
+                <!-- Table will be populated here -->
+            </table>
+        </div>
+
+        <div class="recommendation-box">
+            <h3>✅ Implementation Guidelines</h3>
+            <div class="recommendation-content">
+                <div class="recommendation-section">
+                    <h4>💰 Starting Parameters</h4>
+                    <ul>
+                        <li><strong>Capital:</strong> $1,000</li>
+                        <li><strong>Leverage:</strong> 50:1</li>
+                        <li><strong>Max Drawdown:</strong> 20% ($200)</li>
+                        <li><strong>Sniper Risk:</strong> 2.0%</li>
+                        <li><strong>Background Risk:</strong> 1.0%</li>
+                    </ul>
+                </div>
+                <div class="recommendation-section">
+                    <h4>📊 Strategy Details</h4>
+                    <ul>
+                        <li><strong>Sniper:</strong> EMA 3/9, ADX > 10</li>
+                        <li><strong>Background:</strong> EMA 9/21, ADX > 20</li>
+                        <li><strong>Pairs:</strong> EUR, GBP, JPY, AUD</li>
+                        <li><strong>Timeframe:</strong> 4H primary</li>
+                        <li><strong>Targets:</strong> Dynamic (volatility-adjusted)</li>
+                    </ul>
+                </div>
+                <div class="recommendation-section">
+                    <h4>⚠️ Risk Management</h4>
+                    <ul>
+                        <li><strong>Daily:</strong> Monitor equity vs. peak</li>
+                        <li><strong>Hard Stop:</strong> 20% drawdown</li>
+                        <li><strong>Soft Stop:</strong> 15% triggers review</li>
+                        <li><strong>Weekly:</strong> Review performance</li>
+                        <li><strong>Monthly:</strong> Re-run analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h4>⚠️ Important Risk Disclaimers</h4>
+            <ul>
+                <li><strong>Past performance does not guarantee future results</strong> - Historical backtests may not reflect live trading outcomes</li>
+                <li><strong>High leverage amplifies risk</strong> - 50:1 leverage can lead to rapid account depletion in adverse conditions</li>
+                <li><strong>Markets can change rapidly</strong> - Current strong trend conditions may not persist</li>
+                <li><strong>Simulations use assumptions</strong> - Real execution may differ due to slippage, requotes, etc.</li>
+                <li><strong>Emotional discipline required</strong> - Stick to the plan even during drawdowns</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let data = {};
+
+        // Load recommendation data
+        fetch('live_trading_recommendation.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+                updateDashboard();
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+            });
+
+        function updateDashboard() {
+            updateRecommendationStats();
+            updateMarketAnalysis();
+            updateReturnComparisonChart();
+            updateRiskReturnChart();
+            updateComparisonTable();
+        }
+
+        function updateRecommendationStats() {
+            const rec = data.recommended_config;
+            const statsGrid = document.getElementById('recommendation-stats');
+
+            const stats = [
+                { label: 'Expected Return', value: `${rec.expected_median_return.toFixed(1)}%` },
+                { label: 'Sniper Risk', value: `${rec.sniper_risk}%` },
+                { label: 'Background Risk', value: `${rec.background_risk}%` },
+                { label: 'Avg Trades', value: rec.expected_avg_trades.toFixed(1) },
+                { label: 'Win Rate', value: `${rec.expected_win_rate.toFixed(1)}%` },
+                { label: 'Max Drawdown', value: `${rec.expected_max_dd.toFixed(1)}%` }
+            ];
+
+            statsGrid.innerHTML = stats.map(stat => `
+                <div class="highlight-item">
+                    <div class="highlight-label">${stat.label}</div>
+                    <div class="highlight-value">${stat.value}</div>
+                </div>
+            `).join('');
+        }
+
+        function updateMarketAnalysis() {
+            document.getElementById('market-recommendation').textContent = data.market_recommendation;
+
+            const analysisGrid = document.getElementById('market-analysis');
+            let html = '';
+
+            for (const [pair, analysis] of Object.entries(data.market_analysis)) {
+                html += `
+                    <div class="market-pair">
+                        <h4>${pair}</h4>
+                        <div class="market-stat">
+                            <span>Volatility:</span>
+                            <strong>${analysis.volatility} (z=${analysis.volatility_z.toFixed(2)})</strong>
+                        </div>
+                        <div class="market-stat">
+                            <span>Trend:</span>
+                            <strong>${analysis.trend_strength} ${analysis.trend_direction}</strong>
+                        </div>
+                        <div class="market-stat">
+                            <span>ADX:</span>
+                            <strong>${analysis.trend_strength_value.toFixed(1)}</strong>
+                        </div>
+                        <div class="market-stat">
+                            <span>Recent Signals:</span>
+                            <strong>${analysis.sniper_signals_20d}S + ${analysis.background_signals_20d}B</strong>
+                        </div>
+                        <div class="market-stat">
+                            <span>20-Day Change:</span>
+                            <strong>${analysis.price_change_20d_pct.toFixed(2)}%</strong>
+                        </div>
+                    </div>
+                `;
+            }
+
+            analysisGrid.innerHTML = html;
+        }
+
+        function updateReturnComparisonChart() {
+            const ctx = document.getElementById('returnComparisonChart').getContext('2d');
+
+            const configs = data.top_3_configs.concat(
+                // Add remaining configs from a full data source if available
+            );
+
+            // For now, just use top 3 + recommended
+            const labels = data.top_3_configs.map(c => c.name);
+            const returns = data.top_3_configs.map(c => c.median_return);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Median Return %',
+                        data: returns,
+                        backgroundColor: [
+                            'rgba(102, 126, 234, 0.8)',
+                            'rgba(118, 75, 162, 0.8)',
+                            'rgba(76, 175, 80, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgb(102, 126, 234)',
+                            'rgb(118, 75, 162)',
+                            'rgb(76, 175, 80)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Return: ' + context.parsed.y.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateRiskReturnChart() {
+            const ctx = document.getElementById('riskReturnChart').getContext('2d');
+
+            // Create scatter plot data
+            const scatterData = data.top_3_configs.map(c => ({
+                x: c.sniper_risk,
+                y: c.median_return,
+                label: c.name
+            }));
+
+            new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Top 3 Configurations',
+                        data: scatterData,
+                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
+                        borderColor: 'rgb(102, 126, 234)',
+                        pointRadius: 10,
+                        pointHoverRadius: 15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const point = scatterData[context.dataIndex];
+                                    return [
+                                        point.label,
+                                        `Risk: ${point.x}%`,
+                                        `Return: ${point.y.toFixed(1)}%`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Sniper Risk %'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Median Return %'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateComparisonTable() {
+            const table = document.getElementById('comparison-table');
+
+            let html = `
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Configuration</th>
+                        <th>Sniper Risk</th>
+                        <th>Background Risk</th>
+                        <th>Median Return</th>
+                        <th>Avg Trades</th>
+                        <th>Composite Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            data.top_3_configs.forEach((config, idx) => {
+                const rowClass = idx === 0 ? 'recommended' : '';
+                const badge = idx === 0 ? '<span class="badge badge-recommended">RECOMMENDED</span>' : '<span class="badge badge-top3">TOP 3</span>';
+
+                html += `
+                    <tr class="${rowClass}">
+                        <td>${idx + 1}</td>
+                        <td>${config.name} ${badge}</td>
+                        <td>${config.sniper_risk}%</td>
+                        <td>${config.background_risk}%</td>
+                        <td>${config.median_return.toFixed(1)}%</td>
+                        <td>${config.avg_trades.toFixed(1)}</td>
+                        <td>${config.composite_score.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody>';
+            table.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

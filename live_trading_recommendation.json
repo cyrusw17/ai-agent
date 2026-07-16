@@ -1,0 +1,91 @@
+{
+  "date_generated": "2026-07-16 00:38:13",
+  "market_state": "NORMAL_VOLATILITY_STRONG_TRENDS",
+  "market_recommendation": "Normal conditions, standard risk acceptable + Strong trends, higher win probability + Low signal frequency, patient approach needed",
+  "recommended_config": {
+    "name": "2% Very Conservative",
+    "sniper_risk": 2.0,
+    "background_risk": 1.0,
+    "expected_median_return": 1459.387133687349,
+    "expected_avg_trades": 93.8,
+    "expected_win_rate": 65.76339165090737,
+    "expected_max_dd": 24.750947947742862,
+    "consistency_score": 754.1968969263193,
+    "composite_score": 1091.3450659314801
+  },
+  "market_analysis": {
+    "EURUSD": {
+      "volatility": "NORMAL",
+      "volatility_z": 1.0979516759973649,
+      "trend_strength": "STRONG",
+      "trend_strength_value": 28.395674133823572,
+      "trend_direction": "BULLISH",
+      "sniper_signals_20d": 1,
+      "background_signals_20d": 0,
+      "price_change_20d_pct": 0.4243204395469948,
+      "current_price": 1.1467890739440918
+    },
+    "GBPUSD": {
+      "volatility": "HIGH",
+      "volatility_z": 2.030831214583965,
+      "trend_strength": "STRONG",
+      "trend_strength_value": 29.776824169819893,
+      "trend_direction": "BULLISH",
+      "sniper_signals_20d": 2,
+      "background_signals_20d": 1,
+      "price_change_20d_pct": 0.9849712254047479,
+      "current_price": 1.3529785871505737
+    },
+    "USDJPY": {
+      "volatility": "NORMAL",
+      "volatility_z": -0.9618676894776946,
+      "trend_strength": "STRONG",
+      "trend_strength_value": 25.001090133968127,
+      "trend_direction": "BEARISH",
+      "sniper_signals_20d": 4,
+      "background_signals_20d": 1,
+      "price_change_20d_pct": 0.3327505307228457,
+      "current_price": 162.218994140625
+    },
+    "AUDUSD": {
+      "volatility": "NORMAL",
+      "volatility_z": 1.0656453082331006,
+      "trend_strength": "STRONG",
+      "trend_strength_value": 34.787744120928494,
+      "trend_direction": "BULLISH",
+      "sniper_signals_20d": 2,
+      "background_signals_20d": 2,
+      "price_change_20d_pct": 0.7639001905186974,
+      "current_price": 0.7008199691772461
+    }
+  },
+  "top_3_configs": [
+    {
+      "rank": 1,
+      "name": "2% Very Conservative",
+      "sniper_risk": 2.0,
+      "background_risk": 1.0,
+      "median_return": 1459.387133687349,
+      "avg_trades": 93.8,
+      "composite_score": 1091.3450659314801
+    },
+    {
+      "rank": 2,
+      "name": "3% Conservative",
+      "sniper_risk": 3.0,
+      "background_risk": 1.5,
+      "median_return": 1124.007066612673,
+      "avg_trades": 60.7,
+      "composite_score": 829.9828581373241
+    },
+    {
+      "rank": 3,
+      "name": "1% Ultra Conservative",
+      "sniper_risk": 1.0,
+      "background_risk": 0.5,
+      "median_return": 719.5739587515765,
+      "avg_trades": 155.0,
+      "composite_score": 689.9622196771714
+    }
+  ]
+}
